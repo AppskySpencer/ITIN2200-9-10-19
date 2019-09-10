@@ -1,0 +1,15 @@
+<div class="container">
+    <div style="margin: 50px;" class="row">
+        <div class="col-12">
+            <h1>Add your new ideas here!</h1>
+            <input [(ngModel)]="newIdea" class="form-control" type="text">
+            <button (click)="saveIdea()" class="btn btn-primary">Submit</button>
+            <button (click)="clearList()" class="btn btn-danger">Clear List</button>
+        </div>
+        <div style="margin-top: 50px" class="col-12">
+            <ul class="list-group">
+                <li *ngFor="let idea of ideaList; let i = index;" class="list-group-item">{{i + 1}}. {{idea}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
